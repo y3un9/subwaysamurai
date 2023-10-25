@@ -1,7 +1,6 @@
-import NavMenu from '../components/NavMenu'
+import './global.css'
 
-import 'normalize.css'
-import * as styles from './global.css'
+import NavMenu from '../components/NavMenu'
 
 import config from '../config.json' assert { type: 'json' }
 

@@ -1,3 +1,5 @@
+@import 'normalize.css/normalize.css';
+
 :root {
   --color-light-primary: #1f2328;
   --color-light-secondary: #6e7781;
