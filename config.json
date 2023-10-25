@@ -1,0 +1,28 @@
+{
+  "baseURL": "https://y3un9.github.io/subwaysamurai",
+  "title": "地铁武士",
+  "description": "",
+  "keywords": "",
+  "author": "y3un9",
+  "github": "https://github.com/y3un9",
+  "dateFormat": "MMM dd, yyyy",
+  "languageCode": "zh-CN",
+  "menu": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Posts",
+      "url": "/posts"
+    },
+    {
+      "name": "Resume",
+      "url": "/resume"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    }
+  ]
+}

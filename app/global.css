@@ -1,0 +1,217 @@
+:root {
+  --color-light-primary: #1f2328;
+  --color-light-secondary: #6e7781;
+  --color-light-border: #d0d7de;
+  --color-light-background: #ffffff;
+  --color-light-inline-background: rgba(175, 184, 193, 0.2);
+  --color-light-code-background: #f6f8fa;
+
+  --color-dark-primary: #e6edf3;
+  --color-dark-secondary: #6e7681;
+  --color-dark-border: #30363d;
+  --color-dark-background: #0d1117;
+  --color-dark-inline-background: rgba(110, 118, 129, 0.4);
+  --color-dark-code-background: #161b22;
+
+  --color-primary: var(--color-light-primary);
+  --color-secondary: var(--color-light-secondary);
+  --color-border: var(--color-light-border);
+  --color-background: var(--color-light-background);
+  --color-inline-background: var(--color-light-inline-background);
+  --color-code-background: var(--color-light-code-background);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0 auto;
+  padding: 1.25em;
+  padding-bottom: 0;
+  max-width: 720px;
+  /* max-width: calc(768px - (1.25em * 2)); */
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: 600;
+}
+
+time {
+  color: var(--color-secondary);
+}
+
+hr {
+  border: 1px dashed var(--color-border);
+  opacity: 0.5;
+  margin: 1em 0;
+}
+
+code {
+  font-size: 13px;
+}
+
+:not(pre) > code {
+  padding: 2px 5px;
+  background-color: var(--color-inline-background);
+  border-radius: 6px;
+}
+
+pre {
+  background-color: var(--color-code-background) !important;
+  padding: 20px !important;
+  font-size: 14px;
+  color: unset !important;
+  border-radius: 8px;
+}
+
+blockquote {
+  padding-left: 20px;
+  border-left: 2px solid var(--color-border);
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+}
+
+a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+header {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border);
+}
+
+footer {
+  padding: 20px;
+  /* border-top: 1px solid var(--color-border); */
+  text-align: center;
+}
+
+nav a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.title,
+nav a {
+  color: var(--color-primary);
+}
+
+a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+.title,
+.title:hover,
+.title:visited {
+  text-decoration: none;
+}
+
+.blog-posts {
+  padding: unset;
+  list-style-type: unset;
+}
+
+.blog-posts li {
+  display: flex;
+  grid-column-gap: 8px;
+}
+
+.blog-posts li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.blog-posts li a {
+  flex: 1;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.blog-posts li a:visited {
+  color: var(--color-primary);
+}
+
+.blog-posts li span {
+  flex: unset;
+}
+
+.article-content {
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: var(--color-dark-primary);
+    --color-secondary: var(--color-dark-secondary);
+    --color-border: var(--color-dark-border);
+    --color-background: var(--color-dark-background);
+    --color-inline-background: var(--color-dark-inline-background);
+    --color-code-background: var(--color-dark-code-background);
+  }
+
+  a {
+    color: #2f81f7;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    /* max-width: calc(1024px - (1.25em * 2)); */
+  }
+
+  header {
+    position: absolute;
+    top: 40px;
+    right: 50%;
+    margin-right: 380px;
+  }
+
+  .title > :first-child {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  nav a {
+    display: block;
+    margin-right: 0 !important;
+  }
+  nav a:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  main {
+    padding: 20px;
+    padding-bottom: 0;
+    border-top: 0;
+  }
+
+  main > *:first-child,
+  article > *:first-child,
+  .article-content > *:first-child {
+    margin-top: 0;
+  }
+
+  .article-title {
+    line-height: 1;
+  }
+}

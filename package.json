@@ -1,0 +1,26 @@
+{
+  "name": "subwaysamurai",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && serve ./out"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.16.9",
+    "next": "^13.5.6",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-katex": "^7.0.0",
+    "rehype-raw": "^7.0.0",
+    "remark-breaks": "^4.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0",
+    "serve": "^14.2.1"
+  }
+}
