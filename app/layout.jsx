@@ -1,8 +1,7 @@
 import NavMenu from '../components/NavMenu'
 
 import 'normalize.css'
-// import '../styles/bear-blog.css'
-import './global.css'
+import * as styles from './global.css'
 
 import config from '../config.json' assert { type: 'json' }
 
