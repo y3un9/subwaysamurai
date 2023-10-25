@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://y3un9.github.io/subwaysamurai/sitemap.xml
