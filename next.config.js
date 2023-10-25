@@ -4,7 +4,7 @@ const nextConfig = {
     ? 'export'
     : 'standalone',
   skipTrailingSlashRedirect: true,
-  basePath: process.env.DEPLOY_TARGET === 'gh-pages'
+  basePath: process.env.NODE_ENV === 'production'
     ? '/subwaysamurai'
     : ''
 }
