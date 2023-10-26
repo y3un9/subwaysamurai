@@ -15,14 +15,6 @@
     {
       "name": "Posts",
       "url": "/posts"
-    },
-    {
-      "name": "Resume",
-      "url": "/resume"
-    },
-    {
-      "name": "About",
-      "url": "/about"
     }
   ]
 }

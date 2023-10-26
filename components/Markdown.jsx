@@ -3,10 +3,10 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
+// import remarkMath from 'remark-math'
+// import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
-import 'katex/dist/katex.min.css'
+// import 'katex/dist/katex.min.css'
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
 import { xcode } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
@@ -18,12 +18,12 @@ export default function Markdown({
     <ReactMarkdown
       remarkPlugins={[
         remarkGfm,
-        remarkMath,
+        // remarkMath,
         remarkBreaks,
       ]}
       rehypePlugins={[
         rehypeRaw,
-        rehypeKatex,
+        // rehypeKatex,
       ]}
       components={{
         pre: ({ children }) => children,
