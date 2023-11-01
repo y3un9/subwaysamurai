@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Modal from '../../../components/Modal'
+import {format} from 'date-fns'
 import {getImageByName, getImages} from '../../../lib/content'
 
 export default async function Albums({
@@ -11,7 +12,7 @@ export default async function Albums({
   } = params
 
   let images = await getImages()
-  let currentImage = await getImageByName(slug[0], images)
+  let currentImage = await getImageByName(decodeURIComponent(slug[0]), images)
 
   return (
     <>
@@ -25,11 +26,11 @@ export default async function Albums({
             key={image.name}
             className="item"
             title={image.title}
-            href={`/albums/${image.name}`}
+            href={`/albums/${encodeURIComponent(image.name)}`}
           >
             <Image
-              width={200}
-              height={300}
+              width={image.width}
+              height={image.height}
               src={image.publicPath}
               alt={image.title}
             />
@@ -40,10 +41,13 @@ export default async function Albums({
         ))}
       </div>
       {currentImage && (
-        <Modal>
+        <Modal
+          isOpen={true}
+          closeHref="/albums"
+        >
           <img
-            width="100%"
-            height="100%"
+            className="image"
+            width={520}
             src={currentImage.publicPath}
             alt={currentImage.title}
           />
