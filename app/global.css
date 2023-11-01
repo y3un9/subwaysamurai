@@ -163,6 +163,13 @@ nav a.active {
 .article-content {
   line-height: 1.6;
 }
+.article-content p:has(img) {
+  text-align: center;
+}
+.article-content p img {
+  width: 70%;
+  height: auto;
+}
 
 .albums {
   display: flex;
