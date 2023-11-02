@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Modal from '../../../components/ClientOnlyModal'
+import Modal from '../../../components/Modal'
 import {getImageByName, getImages} from '../../../lib/content'
 
 export default async function Albums({
