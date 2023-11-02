@@ -29,7 +29,7 @@ export default async function Albums({
             <img
               src={image.publicPath}
               alt={image.title}
-              loading="lazy"
+              // loading="lazy"
             />
             <p>
               <small>{images[0].title}</small>

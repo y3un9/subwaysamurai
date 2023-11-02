@@ -34,13 +34,12 @@ export default function Markdown({
           node,
           ...props
         }) => {
-          let image = await getImageByName(path.basename(src, path.extname(src)))
+          let image = await getImageByName(path.basename(decodeURIComponent(src)))
           return (
             <>
               <img
-                src={image ? getLocalDistPath(image.publicPath) : src}
-                alt={''}
-                loading="lazy"
+                src={image ? image.publicPath : src}
+                // loading="lazy"
               />
               {alt && <>
                 <br />
