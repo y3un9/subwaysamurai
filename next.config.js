@@ -1,3 +1,5 @@
+const config = require('./config.json')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: process.env.NODE_ENV === 'production'
@@ -5,7 +7,7 @@ const nextConfig = {
     : 'standalone',
   skipTrailingSlashRedirect: true,
   basePath: process.env.NODE_ENV === 'production'
-    ? '/subwaysamurai'
+    ? config.basePath
     : ''
 }
 

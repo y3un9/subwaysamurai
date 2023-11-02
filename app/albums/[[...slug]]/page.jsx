@@ -1,6 +1,6 @@
+import path from 'node:path'
 import Link from 'next/link'
 import Modal from '../../../components/Modal'
-import {format} from 'date-fns'
 import {getImageByName, getImages} from '../../../lib/content'
 
 export default async function Albums({

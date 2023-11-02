@@ -1,5 +1,6 @@
 {
   "baseURL": "https://y3un9.github.io/subwaysamurai",
+  "basePath": "/subwaysamurai",
   "title": "地铁武士",
   "description": "",
   "keywords": "",
