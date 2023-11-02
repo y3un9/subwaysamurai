@@ -10,10 +10,6 @@
   "languageCode": "zh-CN",
   "menu": [
     {
-      "name": "Home",
-      "url": "/"
-    },
-    {
       "name": "Posts",
       "url": "/posts"
     },

@@ -1,5 +1,6 @@
 import './global.css'
 
+import Link from 'next/link'
 import NavMenu from '../components/NavMenu'
 
 import config from '../config.json' assert { type: 'json' }
@@ -36,9 +37,9 @@ export function Header({
 }) {
   return (
     <header>
-      <a className="title" href="/">
+      <Link className="title" href="/">
         <h2>{title}</h2>
-      </a>
+      </Link>
       <NavMenu menu={menu} />
     </header>
   )

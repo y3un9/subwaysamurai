@@ -8,6 +8,9 @@ import rehypeRaw from 'rehype-raw'
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
 import { xcode } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
+import path from 'node:path'
+import {getImageByName, getLocalDistPath} from '../lib/content'
+
 /** @type {import('react').FC} */
 export default function Markdown({
   children
@@ -30,19 +33,22 @@ export default function Markdown({
           alt,
           node,
           ...props
-        }) => (
-          <>
-            <img
-              src={src}
-              alt={''}
-              loading="lazy"
-            />
-            {alt && <>
-              <br />
-              <small>{alt}</small>
-            </>}
-          </>
-        ),
+        }) => {
+          let image = await getImageByName(path.basename(src, path.extname(src)))
+          return (
+            <>
+              <img
+                src={image ? getLocalDistPath(image.publicPath) : src}
+                alt={''}
+                loading="lazy"
+              />
+              {alt && <>
+                <br />
+                <small>{alt}</small>
+              </>}
+            </>
+          )
+        },
         code({
           children,
           className,

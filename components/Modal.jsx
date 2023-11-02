@@ -18,7 +18,7 @@ export default function Modal({
 
   useEffect(() => {
     /** @type {KeyboardEventHandler} */
-    const handleKeyDown = e => e.key === 'Escape' && onClose()
+    const handleKeyDown = e => e.key === 'Escape' && handleCloseClick()
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
