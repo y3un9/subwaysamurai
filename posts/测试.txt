@@ -1,5 +1,5 @@
 1:HL["/subwaysamurai/_next/static/css/73fdbadef7b3170a.css","style",{"crossOrigin":""}]
-0:["jmYFouz8WevxdC9TIwFEo",[[["",{"children":["posts",{"children":[["slug","%E6%B5%8B%E8%AF%95","d"],{"children":["__PAGE__?{\"slug\":\"测试\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/subwaysamurai/_next/static/css/73fdbadef7b3170a.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["_y3HBFF1sYzGpOOtNcBud",[[["",{"children":["posts",{"children":[["slug","%E6%B5%8B%E8%AF%95","d"],{"children":["__PAGE__?{\"slug\":\"测试\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/subwaysamurai/_next/static/css/73fdbadef7b3170a.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[6410,["492","static/chunks/492-c5e89f7230c0cbd9.js","185","static/chunks/app/layout-ab63f7cee10ab5e6.js"],""]
 5:I[1640,[],""]
 6:I[8517,["601","static/chunks/app/error-f8b847c3d735185c.js"],""]
