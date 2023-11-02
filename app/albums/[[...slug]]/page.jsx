@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Modal from '../../../components/Modal'
 import {format} from 'date-fns'
@@ -28,11 +27,10 @@ export default async function Albums({
             title={image.title}
             href={`/albums/${encodeURIComponent(image.name)}`}
           >
-            <Image
-              width={image.width}
-              height={image.height}
+            <img
               src={image.publicPath}
               alt={image.title}
+              loading="lazy"
             />
             <p>
               <small>{images[0].title}</small>
