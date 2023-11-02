@@ -9,7 +9,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlig
 import { xcode } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import path from 'node:path'
-import {getImageByName, getLocalDistPath} from '../lib/content'
+import {getPhotoBySlug, getLocalDistPath} from '../lib/content'
 
 /** @type {import('react').FC} */
 export default function Markdown({
@@ -34,12 +34,12 @@ export default function Markdown({
           node,
           ...props
         }) => {
-          let image = await getImageByName(path.basename(decodeURIComponent(src)))
+          let photo = await getPhotoBySlug(path.basename(decodeURIComponent(src)))
           return (
             <>
               <img
-                src={image ? image.publicPath : src}
-                // loading="lazy"
+                src={photo ? photo.publicPath : src}
+                loading="lazy"
               />
               {alt && <>
                 <br />
