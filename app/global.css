@@ -234,6 +234,7 @@ nav a.active {
   border-radius: 8px;
   line-height: 32px;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 .modal .close:hover {

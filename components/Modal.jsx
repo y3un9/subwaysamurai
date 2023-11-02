@@ -1,8 +1,8 @@
 'use client'
 
 import {useEffect, useCallback, KeyboardEventHandler} from 'react'
-import {createPortal} from 'react-dom'
 import {useRouter} from 'next/navigation'
+import ClientOnlyPortal from './ClientOnlyPortal'
 
 export default function Modal({
   isOpen,
@@ -10,10 +10,6 @@ export default function Modal({
   closeHref,
   children
 }) {
-  if (!isOpen) {
-    return null
-  }
-
   let router = useRouter()
 
   useEffect(() => {
@@ -48,21 +44,25 @@ export default function Modal({
     }
   }, [ handleCloseClick ])
 
-  return createPortal(
-    <div
-      className="modal"
-      onClick={handleModalClick}
-    >
+  if (!isOpen) {
+    return null
+  }
+  return (
+    <ClientOnlyPortal selector="body">
       <div
-        className="close"
-        onClick={handleCloseClick}
+        className="modal"
+        onClick={handleModalClick}
       >
-        X
+        <div
+          className="close"
+          onClick={handleCloseClick}
+        >
+          X
+        </div>
+        <div className="content">
+          {children}
+        </div>
       </div>
-      <div className="content">
-        {children}
-      </div>
-    </div>,
-    document.body
+    </ClientOnlyPortal>
   )
 }

@@ -1,4 +1,3 @@
-import path from 'node:path'
 import Link from 'next/link'
 import Modal from '../../../components/Modal'
 import {getImageByName, getImages} from '../../../lib/content'
@@ -60,7 +59,7 @@ export async function generateStaticParams() {
   return [
     { slug: [] },
     ...images.map(image => ({
-      slug: [image.path]
+      slug: [image.name]
     }))
   ]
 }
