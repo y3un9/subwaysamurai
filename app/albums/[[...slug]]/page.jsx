@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Modal from '../../../components/Modal'
+import Modal from '../../../components/ClientOnlyModal'
 import {getImageByName, getImages} from '../../../lib/content'
 
 export default async function Albums({
@@ -47,6 +47,7 @@ export default async function Albums({
             width={520}
             src={currentImage.publicPath}
             alt={currentImage.title}
+            // loading="lazy"
           />
         </Modal>
       )}
