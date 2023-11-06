@@ -14,7 +14,7 @@ export default async function Photo({
       </center>
       <p>{photo.title}</p>
       <p>
-        <i>Shot in {photo.location || 'unknown'}</i>
+        <i>Shot in {photo.location || 'Unknown'}</i>
       </p>
       <p>
         <i>{photo.dateStr}</i>
