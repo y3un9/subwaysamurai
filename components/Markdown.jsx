@@ -34,7 +34,7 @@ export default function Markdown({
           node,
           ...props
         }) => {
-          let photo = await getPhotoBySlug(path.basename(decodeURIComponent(src)))
+          let photo = await getPhotoBySlug(path.basename(decodeURIComponent(src), path.extname(decodeURIComponent(src))))
           return (
             <>
               <img
